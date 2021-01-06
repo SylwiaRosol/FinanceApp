@@ -1,0 +1,73 @@
+body 
+{
+    /* Background pattern from subtlepatterns.com */
+    background-image: url("img/pool_table.png");
+    font-family: 'Lato', sans-serif;
+}
+.conatainer
+{
+    
+    color:burlywood; 
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+	
+}
+.main
+{
+    font-size: 50px;
+    margin-top: 20px;
+    padding-bottom: 50px;
+}
+.input
+{
+    font-size: 30px;
+    padding-top: 10px;
+
+}
+
+input[type=text],
+input[type=password]
+{
+	width: 300px;
+    background-color:seashell;
+    color:seagreen;
+	border: 2px solid peru;
+	border-radius: 5px;
+	font-size: 20px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+input[type=text]:focus,
+input[type=password]:focus
+{
+    background-color:cornsilk;
+    border:2px solid coral;
+
+}
+
+input[type=submit]
+{
+    width: 300px;
+    background-color:seagreen;
+    color: burlywood;
+	border: 2px solid burlywood;  
+	border-radius: 5px;
+	font-size: 30px;
+	padding: 10px;
+	box-sizing: border-box;
+	outline: none;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+input[type=submit]:focus
+{
+    background-color:mediumseagreen;
+}
