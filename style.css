@@ -6,19 +6,30 @@ body
 }
 .conatainer
 {
-    
     color:burlywood; 
     text-align: center;
     margin-left: auto;
-    margin-right: auto;
-    margin-top: 60px;
-	
+    margin-right: auto;	
 }
 .main
 {
     font-size: 50px;
-    margin-top: 20px;
+    margin-top: 50px;
     padding-bottom: 50px;
+    letter-spacing: 2px;
+}
+.information
+{
+    float: left;
+    padding-right: 60px;
+    width: 50%;
+}
+.short_information
+{   
+    font-size: 28px;
+    text-align: center;
+    color:goldenrod;
+    padding-left: 40px;
 }
 .input
 {
@@ -62,12 +73,46 @@ input[type=submit]
 	padding: 10px;
 	box-sizing: border-box;
 	outline: none;
-    margin-top: 35px;
+    margin-top: 20px;
     margin-bottom: 20px;
     cursor: pointer;
+    letter-spacing: 1px;
 }
 
 input[type=submit]:focus
 {
     background-color:mediumseagreen;
+}
+.menu 
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 30px;
+}
+ol
+{
+    list-style-type:none;   
+    padding-left: 0%;
+}
+
+ol a 
+{
+    color:burlywood;
+    text-decoration: none;
+    
+}
+
+ol > li
+{   
+    
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 250px;
+}
+ol > li:hover
+{
+    background-color:cornsilk;
+    border:2px solid coral;
 }
