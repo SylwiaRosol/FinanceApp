@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+    <title>Dodaj wydatek</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <div class="conatainer">
+            <div class="main" style="padding-bottom: 10px; margin-top: 30px;">
+                Dodaj wydatek
+            </div>
+            <div class=input>
+
+                <form>
+                    <input type=text placeholder="kwota" onfocus="this.placeholder=''" onblur="this.placeholder='kwota'" > <br/>
+
+                    <input type="date"> 
+                </form>
+                <p>Sposób płatności</p>
+                    <div class="allCategories">
+                    <form>
+                        <input type="radio"> Karta kredytowa
+                        <input type="radio"> Karta debetowa
+                        <input type="radio"> Gotówka
+                    </form>
+                    </div>
+
+                <p>Kategorie</p>
+                <div class="allCategories">
+                    <div class="category">
+                    <form>
+                        <input type="radio"> Jedzenie <br />
+                        <input type="radio"> Mieszkanie <br />
+                        <input type="radio"> Transport <br />
+                        <input type="radio"> Telekomunikacja <br />
+                    </form>
+                    </div>
+
+                    <div class="category">
+                        <form>
+                        <input type="radio"> Opieka zdrowotna <br />
+                        <input type="radio"> Ubrania <br />
+                        <input type="radio"> Higiena  <br />
+                        <input type="radio"> Dzieci <br />
+                        </form>
+                    </div>
+                    
+                    <div class="category">
+                        <form>
+                        <input type="radio"> Rozrywka <br />
+                        <input type="radio"> Wycieczka <br />
+                        <input type="radio"> Szkolenia <br />
+                        <input type="radio"> Książki <br />
+                        </form>
+                    </div>
+                    
+                    <div class="category">
+                        <form>
+                        <input type="radio"> Oszczędności <br />
+                        <input type="radio"> Emerytura <br />
+                        <input type="radio"> Spłata długów <br />
+                        <input type="radio"> Darowizna <br />
+                        </form>
+                    </div>
+                    <div id=other style="clear:both;">
+                        <input type="radio"> Inne
+                    </div>
+                </div>
+
+                <form>
+                    <input type=text placeholder="komentarz" onfocus="this.placeholder=''" onblur="this.placeholder='komentarz'">
+                </form>
+
+                <form>
+                    <input type="submit" value="Dodaj" style="margin-right: 80px;">
+
+                    <input type="submit" value="Anuluj">
+                    
+                </form>
+
+            </div>
+        </div>
+
+    </body>
+</html>
