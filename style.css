@@ -4,86 +4,130 @@ body
     background-image: url("img/pool_table.png");
     font-family: 'Lato', sans-serif;
 }
-.conatainer
-{
-    color:burlywood; 
-    text-align: center;
+.conatainer {
     margin-left: auto;
     margin-right: auto;	
 }
-.main
-{
-    font-size: 50px;
+
+.main {
     margin-top: 50px;
-    padding-bottom: 50px;
-    letter-spacing: 2px;
+    margin-bottom: 50px;
 }
-.menu 
-{
+
+.menu {
     margin-left: auto;
     margin-right: auto;
     font-size: 30px;
+    text-align: center;   
 }
 
-.information
-{
+.information {
     float: left;
-    padding-right: 60px;
+    margin-left:  50px;
+    margin-right: 70px;
     width: 50%;
 }
-.short_information
-{   
-    font-size: 28px;
-    text-align: center;
-    color:rgba(207, 228, 21, 0.747);
+
+.short_information {   
+    padding-left: 10px;
+    padding-right: 10px;
+
 }
-.category
-{
+
+.category {
     float: left;
     text-align: left;
     margin-left: 50px;
     margin-right: 50px;
 }
-.allCategories
-{
+
+.allCategories {
     color:rgba(207, 228, 21, 0.747);
     font-size: 25px;
     margin-left: auto;
     margin-right: auto;
-    
 }
-.input
-{
+
+.box {
+
+    padding-right: 80px;
+    color:burlywood; 
+}
+.dropDownMenu {
+    float:right;
+}
+.dropDown {
+    background-color:seagreen;
+    color: burlywood;
+	border: 2px solid burlywood;  
+	border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+.dropDown:hover {
+    
+    background-color:mediumseagreen;
+}
+
+.dropdownContent {
+    background-color:seagreen;
+    display: none;
+    border-top: peru;
+    z-index: 100;
+    position: absolute;
+    width: 23%;
+}
+.dropdownContent a {
+    color: burlywood;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: block;  
+    border-radius: 5px;
+    font-size: 20px;
+	border: 1px solid burlywood;
+}
+.dropdownContent a:hover {
+	border: 1px solid peru;
+    background-color:mediumseagreen;
+} 
+
+.dropDownMenu:hover .dropdownContent {
+    display: block;
+}
+
+.input {
     font-size: 30px;
     padding-top: 10px;
+    text-align: center;
 }
 
 input[type=text],
 input[type=password],
-input[type=date]
-{
+input[type=date] {
 	width: 300px;
     background-color:seashell;
     color:seagreen;
 	border: 2px solid peru;
 	border-radius: 5px;
-	font-size: 20px;
+	font-size: 25px;
 	padding: 10px;
 	box-sizing: border-box;
 	outline: none;
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: center;
 
 }
+
 input[type=text]:focus,
-input[type=password]:focus
-{
+input[type=password]:focus {
+    
     background-color:cornsilk;
     border:2px solid coral;
 }
 
-input[type=submit]
-{
+input[type=submit] {
     width: 300px;
     background-color:seagreen;
     color: burlywood;
@@ -99,51 +143,80 @@ input[type=submit]
     letter-spacing: 1px;
 }
 
-input[type=submit]:focus
-{
+input[type=submit]:focus {
     background-color:mediumseagreen;
 }
 
-input[type="radio"]
-{
+input[type="radio"] {
     padding-bottom: 8px;
+    cursor: pointer;
 }
 
-ol
-{
+ol {
     list-style-type:none;   
     padding-left: 0%;
 }
 
-ol a 
-{
+ol a  {
     color:burlywood;
-    text-decoration: none;
-    
+    text-decoration: none; 
 }
 
-ol > li
-{   
+ol > li {   
     
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     margin-top: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
     width: 250px;
-}
-ol > li:hover
-{
-    background-color:cornsilk;
-    border:2px solid coral;
+    border: 2px solid  burlywood;
     border-radius: 10px;
 }
 
-p
-{
+ol > li:hover {
+    
+    background-color:mediumseagreen;
+}
+
+h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    color:burlywood; 
+    text-align: center;
+}
+h2 {
+    font-size: 40px;
     letter-spacing: 1px;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    font-size: 30px;
+    color:burlywood; 
+    text-align: center;
+}
+p {
+    letter-spacing: 1px;
+    font-size: 28px;
+    text-align: center;
+    color:rgba(207, 228, 21, 0.747);
+}
+
+table {
+
+    margin-left: auto;
+    margin-right: auto;
+    color:burlywood; 
+    border: 3px solid peru;
+    font-size: 25px;
+    text-align: center;
+}
+
+td {
+    
+    border-left: 1px solid peru;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+td:first-child {
+    border-left: none;
 }
