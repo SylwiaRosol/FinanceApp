@@ -7,31 +7,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+        
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
     </head>
 
     <body>
         <div class="conatainer">
+        <header>
             <div class="main" style="margin-bottom: 30px;">
                 <h1>Dodaj wydatek</h1>
             </div>
+        </header>
+        <main>
             <div class=input>
-
+            
                 <form>
                     <input type=text placeholder="kwota" onfocus="this.placeholder=''" onblur="this.placeholder='kwota'" > <br/>
 
                     <input type="date"> 
                 </form>
-
+            
+         <header>
                 <h2>Sposób płatności</h2>
-                    <div class="allCategories">
+        </header>    
+                <div class="allCategories">
                     <form>
                         <input type="radio"> Karta kredytowa  
                         <input type="radio"> Karta debetowa  
                         <input type="radio"> Gotówka  
                     </form>
                     </div>
-
+         <header>   
                 <h2>Kategorie</h2>
+        </header>       
                 <div class="allCategories">
                     <div class="category">
                     <form>
@@ -78,14 +88,17 @@
                 </form>
 
                 <form>
-                    <input type="submit" value="Dodaj" style="margin-right: 80px;">
+                    <input id="add" type="submit" value="Dodaj" style="margin-right: 80px;">
 
-                    <input type="submit" value="Anuluj">
+                    <input id="cancel" type="submit" value="Anuluj">
                     
                 </form>
 
             </div>
+        </main>
         </div>
-
+        
+        <script src="jquery-3.2.1.min.js"></script>
+	    <script src="script.js"></script>
     </body>
 </html>

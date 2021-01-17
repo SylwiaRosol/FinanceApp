@@ -51,7 +51,9 @@ body
 .box {
 
     padding-right: 80px;
+    padding-left: 80px;
     color:burlywood; 
+
 }
 .dropDownMenu {
     float:right;
@@ -91,10 +93,6 @@ body
 	border: 1px solid peru;
     background-color:mediumseagreen;
 } 
-
-.dropDownMenu:hover .dropdownContent {
-    display: block;
-}
 
 .input {
     font-size: 30px;
@@ -144,6 +142,10 @@ input[type=submit] {
 }
 
 input[type=submit]:focus {
+    background-color:mediumseagreen;
+}
+
+input[type=submit]:hover {
     background-color:mediumseagreen;
 }
 

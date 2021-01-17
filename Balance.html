@@ -7,27 +7,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+    
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
     </head>
 
     <body>
         <div class="conatainer">
+        <header>
             <div class="main">
                 <h1>Bilans finansowy</h1>
             </div>
-            
-            
+        </header>
+        <nav>
                 <div class="box">
+                    <div class="dropDownMenu" style="float: left;">
+                       <input id="goToTheMenu" type="submit" value="Menu główne" style="margin-top:0; margin-botton: 0;"> 
+                    </div>
                     <div class="dropDownMenu">
-                    <button class="dropDown">Okres rozliczeniowy</button>
-                    <div class="dropdownContent">
-                    <a href=#>Bierzący miesiąc</a>
-                    <a href=#>Poprzedni miesiąc</a>
-                    <a href=#>Bierzący rok</a>
-                    <a href=#>Niestandardowy</a>
+                    <button  id="billingPeriod" class="dropDown">Okres rozliczeniowy</button>
+                        <div class="dropdownContent">
+                        <a href=#>Bierzący miesiąc</a>
+                        <a href=#>Poprzedni miesiąc</a>
+                        <a href=#>Bierzący rok</a>
+                        <a href=#>Niestandardowy</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-                </div>
-            
+        </nav>
+        <main>    
             <div class="menu" style="clear: both;">
                 <h2>Przychody</h2>
                 <table>
@@ -131,21 +140,19 @@
                 </table>
 
                 <h2>Bilans końcowy: </h2>
-                <p>Wydatki:  3890 PLN </p> 
-                <p> Przychody:  4500 PLN </p>
-                <p> Bilans: 610 PLN </p>
+                <p>Wydatki:  15000 PLN </p> 
+                <p> Przychody:  20000 PLN </p>
+                <p> Bilans: 5000 PLN </p>
                 <p> Brawo, zarabiasz więcej niż wydajesz!</p>
 
             
             </div>
 
-
-
-
-
-
-
+        </main>
 
         </div>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+	    <script src="script.js"></script>
     </body>
 </html>

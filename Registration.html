@@ -7,15 +7,21 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
+    
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
     </head>
 
     <body>
-        <div class="conatainer">
+            <div class="conatainer">
+        <header>
             <div class="main">
                <h1>Utwórz użytkownika</h1>
             </div>
+        </header>
+        <main>
             <div class="input">
-                
                 <form>
                     
                     <input type="text" placeholder="imię" onfocus="this.placeholder=''" onblur="this.placeholder='imię'" > <br/>
@@ -24,13 +30,16 @@
                     
                     <input type="password" placeholder="hasło" onfocus="this.placeholder=''" onblur="this.placeholder='hasło'" > <br/>
                     
-                    <input type="submit" value="Zarejstruj się">
+                    <input id="addNewUser" type="submit" value="Zarejstruj się">
                     
                 </form>
 
             </div>
-        </div>
+            </div>
 
-
+        </main>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+	    <script src="script.js"></script>
     </body>
 </html>
