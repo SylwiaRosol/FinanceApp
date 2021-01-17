@@ -4,55 +4,128 @@ body
     background-image: url("img/pool_table.png");
     font-family: 'Lato', sans-serif;
 }
-.conatainer
-{
-    
-    color:burlywood; 
-    text-align: center;
+.conatainer {
+    margin-left: auto;
+    margin-right: auto;	
+}
+
+.main {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.menu {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 60px;
-	
+    font-size: 30px;
+    text-align: center;   
 }
-.main
-{
-    font-size: 50px;
-    margin-top: 20px;
-    padding-bottom: 50px;
+
+.information {
+    float: left;
+    margin-left:  50px;
+    margin-right: 70px;
+    width: 50%;
 }
-.input
-{
+
+.short_information {   
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.category {
+    float: left;
+    text-align: left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.allCategories {
+    color:rgba(207, 228, 21, 0.747);
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box {
+
+    padding-right: 80px;
+    padding-left: 80px;
+    color:burlywood; 
+
+}
+.dropDownMenu {
+    float:right;
+}
+.dropDown {
+    background-color:seagreen;
+    color: burlywood;
+	border: 2px solid burlywood;  
+	border-radius: 5px;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+}
+.dropDown:hover {
+    
+    background-color:mediumseagreen;
+}
+
+.dropdownContent {
+    background-color:seagreen;
+    display: none;
+    border-top: peru;
+    z-index: 100;
+    position: absolute;
+    width: 23%;
+}
+.dropdownContent a {
+    color: burlywood;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: block;  
+    border-radius: 5px;
+    font-size: 20px;
+	border: 1px solid burlywood;
+}
+.dropdownContent a:hover {
+	border: 1px solid peru;
+    background-color:mediumseagreen;
+} 
+
+.input {
     font-size: 30px;
     padding-top: 10px;
-
+    text-align: center;
 }
 
 input[type=text],
-input[type=password]
-{
+input[type=password],
+input[type=date] {
 	width: 300px;
     background-color:seashell;
     color:seagreen;
 	border: 2px solid peru;
 	border-radius: 5px;
-	font-size: 20px;
+	font-size: 25px;
 	padding: 10px;
 	box-sizing: border-box;
 	outline: none;
     margin-top: 20px;
     margin-bottom: 20px;
+    text-align: center;
 
 }
+
 input[type=text]:focus,
-input[type=password]:focus
-{
+input[type=password]:focus {
+    
     background-color:cornsilk;
     border:2px solid coral;
-
 }
 
-input[type=submit]
-{
+input[type=submit] {
     width: 300px;
     background-color:seagreen;
     color: burlywood;
@@ -62,12 +135,90 @@ input[type=submit]
 	padding: 10px;
 	box-sizing: border-box;
 	outline: none;
-    margin-top: 35px;
+    margin-top: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+input[type=submit]:focus {
+    background-color:mediumseagreen;
+}
+
+input[type=submit]:hover {
+    background-color:mediumseagreen;
+}
+
+input[type="radio"] {
+    padding-bottom: 8px;
     cursor: pointer;
 }
 
-input[type=submit]:focus
-{
+ol {
+    list-style-type:none;   
+    padding-left: 0%;
+}
+
+ol a  {
+    color:burlywood;
+    text-decoration: none; 
+}
+
+ol > li {   
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 250px;
+    border: 2px solid  burlywood;
+    border-radius: 10px;
+}
+
+ol > li:hover {
+    
     background-color:mediumseagreen;
+}
+
+h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    color:burlywood; 
+    text-align: center;
+}
+h2 {
+    font-size: 40px;
+    letter-spacing: 1px;
+    color:burlywood; 
+    text-align: center;
+}
+p {
+    letter-spacing: 1px;
+    font-size: 28px;
+    text-align: center;
+    color:rgba(207, 228, 21, 0.747);
+}
+
+table {
+
+    margin-left: auto;
+    margin-right: auto;
+    color:burlywood; 
+    border: 3px solid peru;
+    font-size: 25px;
+    text-align: center;
+}
+
+td {
+    
+    border-left: 1px solid peru;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+td:first-child {
+    border-left: none;
 }

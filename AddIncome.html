@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+    <title>Dodaj wydatek</title>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+        
+	<!--[if lt IE 9]>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<![endif]-->
+    </head>
+
+    <body>
+        <div class="conatainer">
+        <header>
+            <div class="main" style="margin-bottom: 30px;">
+                <h1>Dodaj wydatek</h1>
+            </div>
+        </header>
+        <main>
+            <div class=input>
+            
+                <form>
+                    <input type=text placeholder="kwota" onfocus="this.placeholder=''" onblur="this.placeholder='kwota'" > <br/>
+
+                    <input type="date"> 
+                </form>
+            
+         <header>
+                <h2>Sposób płatności</h2>
+        </header>    
+                <div class="allCategories">
+                    <form>
+                        <input type="radio"> Karta kredytowa  
+                        <input type="radio"> Karta debetowa  
+                        <input type="radio"> Gotówka  
+                    </form>
+                    </div>
+         <header>   
+                <h2>Kategorie</h2>
+        </header>       
+                <div class="allCategories">
+                    <div class="category">
+                    <form>
+                        <input type="radio"> Jedzenie <br />
+                        <input type="radio"> Mieszkanie/ Dom <br />
+                        <input type="radio"> Transport <br />
+                        <input type="radio"> Telekomunikacja <br />
+                    </form>
+                    </div>
+
+                    <div class="category">
+                        <form>
+                        <input type="radio"> Opieka zdrowotna <br />
+                        <input type="radio"> Ubrania <br />
+                        <input type="radio"> Higiena  <br />
+                        <input type="radio"> Dzieci <br />
+                        </form>
+                    </div>
+                    
+                    <div class="category">
+                        <form>
+                        <input type="radio"> Rozrywka <br />
+                        <input type="radio"> Wycieczka <br />
+                        <input type="radio"> Szkolenia <br />
+                        <input type="radio"> Książki <br />
+                        </form>
+                    </div>
+                    
+                    <div class="category">
+                        <form>
+                        <input type="radio"> Oszczędności <br />
+                        <input type="radio"> Na emeryturę <br />
+                        <input type="radio"> Spłata długów <br />
+                        <input type="radio"> Darowizna <br />
+                        </form>
+                    </div>
+                    <div id=other style="clear:both;">
+                        <input type="radio"> Inne
+                    </div>
+                </div>
+
+                <form>
+                    <input type=text placeholder="komentarz" onfocus="this.placeholder=''" onblur="this.placeholder='komentarz'">
+                </form>
+
+                <form>
+                    <input id="add" type="submit" value="Dodaj" style="margin-right: 80px;">
+
+                    <input id="cancel" type="submit" value="Anuluj">
+                    
+                </form>
+
+            </div>
+        </main>
+        </div>
+        
+        <script src="jquery-3.2.1.min.js"></script>
+	    <script src="script.js"></script>
+    </body>
+</html>
