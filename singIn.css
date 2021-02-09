@@ -17,32 +17,35 @@
     padding-bottom: 40px;
     background-image: url('img/gold-piggy.png');
     font-family: 'Lato', sans-serif;
-    color:cornsilk;
   }
   
   .form-signin {
     width: 100%;
     max-width: 450px;
-    padding: 15px;
+    padding: 20px;
     margin: 0 auto;
     text-align: center;
     background-color:#777;
-	border: 2px solid burlywood;  
+  	border: 2px solid burlywood;  
     border-radius: 5px;
     opacity: 0.8;
+    color: burlywood;
 
   }
   
   .form-label-group {
     position: relative;
-    margin-bottom: 15px;
     margin-top: 15px;
+    margin-bottom: 15px;
     color:darkgreen;
   }
   
   .form-label-group > input {
     border: 2px solid burlywood;
-    border-radius: 5px;    
+    border-radius: 5px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 60%;
   }
 
   .form-label-group > input,
@@ -55,7 +58,7 @@
     top: 0;
     left: 0;
     display: block;
-    width: 95%;
+    width: 100%;
     margin-bottom: 0;
     line-height: 1.5;
     border: 1px solid transparent;
@@ -100,22 +103,24 @@
     letter-spacing: 2px;
     color:burlywood; 
     text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+p {
+  color:cornsilk;
 }
 #button {
     width: 160px;
     background-color:seagreen;
     color: burlywood;
-	border: 2px solid burlywood;  
-	border-radius: 5px;
-	font-size: 15px;
-	padding: 10px;
-	box-sizing: border-box;
-	outline: none;
+    border: 2px solid burlywood;  
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
     margin-top: 30px;
     margin-bottom: 30px;
-    margin-right: 10px;
     cursor: pointer;
     letter-spacing: 1px;
 }
