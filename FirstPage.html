@@ -1,45 +1,75 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
-	<title>Finanse</title>
-	<meta name="description" content="Aplikacja pomagająca w organizowaniu budżetu">
-	<meta name="keywords" content="finanse, budżet, bilans finansowy">
-	<meta name="author" content="Sylwia Rosół">
-	<meta http-equiv="X-Ua-Compatible" content="IE=edge">
-	
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8" />
+    <title>Budżet</title>
+	<link rel="shortcut icon" href="img/dollar.png" type="image/png">
+    
+	<!--CSS-->
+    <link rel="stylesheet" href="css/firstPage.css" type="text/css">
+    <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!--CZCIONKA-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-	
+
+    
 	<!--[if lt IE 9]>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
 	<![endif]-->
-	
-</head>
-<body>
-   <header>
+    </head>
+
+    <body>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<a class="navbar-brand col-1" href="FirstPage.html"> <img src="img/logo2.png" alt="Logo aplikacji" width="50" height="50"></a>
+			<blockquote class="blockquote col-10">
+				<p>"Zrobić budżet to wskazać swoim pieniądzom, dokąd mają iść, zamiast się zastanawiać, gdzie się rozeszły."</p>
+				<footer class="blockquote-footer float-right">John C. Maxwell.</footer>
+			</blockquote>	
+		  </nav>
+	  
+		  <main role="main">
+	  
+			<div class="jumbotron pb-4">
+			  <div class="container pb-1">
+				  
+				<img class="img-thumbnail float-right ml-3 mt-2" src="img/personal_finance.png" alt="Mężczyzna i wykresy finansowe">
+				<h1 class="text-uppercase">Zarządzaj swoim budżetem!</h1>
+					<p><i class="demo-icon icon-dollar"></i>Dołącz do użytkowników aplikacji</p>
+					<p><i class="demo-icon icon-dollar"></i>Dowiedz się gdzie się podziały twoje pieniądze</p>
+					<p><i class="demo-icon icon-dollar"></i>Wskaż swoim pieniądzom dokąd mają iść</p>
+					
+				<p><a class="btn float-left" id="button" href="SingIn.html" role="button"> Zaloguj się</a></p>
+				<p><a class="btn" id="button" href="Registration.html" role="button"> Zarejstruj się</a></p>
+			  
+			  </div>
+			</div>
+	  
+			<div class="container">
+			 <div class="row">
+				<div class="col-md-5">
+				  <h2>Dlaczego warto?</h2>
+				  <p>Aplikacja umożliwia szybko ogarnąć własne wydatki i dochody. Dowiesz się na co wydajesz pieniądze, dzięki czemu lepiej będziesz mógł je gospodarować.</p>
+				
+				</div>
+				<div class="col-md-5 offset-md-2">
+				  <h2>Metoda 6 słoików</h2>
+				  <p>Dzięki tej aplikacji poznasz metodę 6 słoików, która pomaga upożądkować wydatki. Możesz też za pomocą tej metody organizować swój budżet</p>
+				  
+				</div>
+			 </div>
+			</div>
+		  </main>
+	  
+		  <footer class="p-1 bg-dark fixed-bottom">
+			<p class="col-2 offset-md-5">&copy;  2021</p>
+		  </footer>
 
 
-
-
-
-   </header> 
-
-
-
-
-
-
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-	
-    <script src="js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
-
-</body>
-</html>
+		<!--JavaScript-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		
+		  </body>
+		  </html>

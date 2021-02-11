@@ -37,7 +37,7 @@
     position: relative;
     margin-top: 15px;
     margin-bottom: 15px;
-    color:darkgreen;
+    color: black;
   }
   
   .form-label-group > input {
@@ -46,6 +46,13 @@
     margin-left: auto; 
     margin-right: auto; 
     width: 60%;
+  }
+  .form-label-group > input:focus {
+    
+    border: 2px solid chocolate;
+    border-radius: 5px;
+    
+    
   }
 
   .form-label-group > input,
@@ -123,4 +130,12 @@ p {
     margin-bottom: 30px;
     cursor: pointer;
     letter-spacing: 1px;
+}
+
+#button:focus {
+  background-color:mediumseagreen;
+}
+
+#button:hover {
+  background-color:mediumseagreen;
 }
