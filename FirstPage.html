@@ -6,9 +6,10 @@
 	<link rel="shortcut icon" href="img/dollar.png" type="image/png">
     
 	<!--CSS-->
-    <link rel="stylesheet" href="css/firstPage.css" type="text/css">
-    <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/firstPage.css" type="text/css">
+    <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
+    
 
 	<!--CZCIONKA-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -29,16 +30,20 @@
 			</blockquote>	
 		  </nav>
 	  
-		  <main role="main">
+		  <main role="main" class="mb-5">
 	  
-			<div class="jumbotron pb-4">
-			  <div class="container pb-1">
+			<div class="jumbotron pb-3">
+			  <div class="container py-1">
 				  
-				<img class="img-thumbnail float-right ml-3 mt-2" src="img/personal_finance.png" alt="Mężczyzna i wykresy finansowe">
+
+			<picture>
+					<source media="(max-width: 767px)" srcset="img/personal_finance2.png">
+					<img class="mg-thumbnail float-right ml-3 mt-2" src="img/personal_finance.png" style="width:auto" alt="wykresy">
+			</picture>
 				<h1 class="text-uppercase">Zarządzaj swoim budżetem!</h1>
-					<p><i class="demo-icon icon-dollar"></i>Dołącz do użytkowników aplikacji</p>
-					<p><i class="demo-icon icon-dollar"></i>Dowiedz się gdzie się podziały twoje pieniądze</p>
-					<p><i class="demo-icon icon-dollar"></i>Wskaż swoim pieniądzom dokąd mają iść</p>
+					<p><i class="demo-icon icon-dollar"></i> Dołącz do użytkowników aplikacji</p>
+					<p><i class="demo-icon icon-dollar"></i> Dowiedz się gdzie się podziały twoje pieniądze</p>
+					<p><i class="demo-icon icon-dollar"></i> Wskaż swoim pieniądzom dokąd mają iść</p>
 					
 				<p><a class="btn float-left" id="button" href="SingIn.html" role="button"> Zaloguj się</a></p>
 				<p><a class="btn" id="button" href="Registration.html" role="button"> Zarejstruj się</a></p>
@@ -62,7 +67,7 @@
 			</div>
 		  </main>
 	  
-		  <footer class="p-1 bg-dark fixed-bottom">
+		  <footer class="bg-dark fixed-bottom">
 			<p class="col-2 offset-md-5">&copy;  2021</p>
 		  </footer>
 

@@ -7,17 +7,28 @@ main {
     
     color: burlywood;
 }
+#navbarsExample03 > ul > li > a {
+    color: burlywood;
+}
+
+#navbarsExample03 > ul > li > a:hover {
+    color:cornsilk;
+}
+#navbarsExample03 > ul > li > #active {
+    color: cornsilk;
+}
+
 .jumbotron {
     background-color: transparent !important;  
     
 }
 .container {
     background-color:#777;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 40px;
     letter-spacing: 2px;
     color:burlywood; 
 }
@@ -52,7 +63,6 @@ p {
 img {
     opacity: 0.9;
 }
-
 .blockquote p {
     color: burlywood;
     font-size: 18px;
@@ -64,7 +74,7 @@ img {
 }
 
 @media (max-width: 767px) {
-    .blockquote {
-    font-size: 10px;
-    }    
+    .blockquote p {
+    font-size: 11px;
+    }   
 }
