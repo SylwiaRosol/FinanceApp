@@ -1,12 +1,14 @@
 body {
     padding-top: 3.5rem;
-    background-image: url('../img/gold-piggy.png');
+    background: url('../img/gold-piggy.png') no-repeat;
+    background-size: 100% 100%;
   }
 
 main {
     
     color: burlywood;
 }
+
 #navbarsExample03 > ul > li > a {
     color: burlywood;
 }
@@ -25,6 +27,7 @@ main {
 .container {
     background-color:#777;
     opacity: 0.9;
+
 }
 
 h1 {
@@ -54,6 +57,7 @@ p {
 }
 #button:focus {
     background-color:mediumseagreen;
+    
 }
 
 #button:hover {
@@ -72,9 +76,44 @@ img {
 .blockquote {
     margin-bottom: 5px !important;
 }
+.icon {
+    float:left;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.icon > label > img {
+    cursor: pointer;
+    
+}
+.icon > label > img:hover {
+    background-color: cornsilk;
+}
+.icon > input[type="radio"]:checked + label > img {
+    background-color: mediumseagreen;
+}
+#pay {
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.form-check {
+    float: left;
+}
+.form-check > input[type="radio"] {
+    cursor: pointer;
+}
+
+.form-check > label > p {
+    cursor: pointer;
+    font-size: 15px;
+}
+
 
 @media (max-width: 767px) {
     .blockquote p {
     font-size: 11px;
     }   
 }
+
