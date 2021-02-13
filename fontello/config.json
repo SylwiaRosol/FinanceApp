@@ -47,6 +47,12 @@
       "css": "calendar",
       "code": 59396,
       "src": "fontawesome"
+    },
+    {
+      "uid": "1e77a2yvsq3owssduo2lcgsiven57iv5",
+      "css": "pencil",
+      "code": 59397,
+      "src": "typicons"
     }
   ]
 }
