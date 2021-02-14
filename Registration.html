@@ -7,7 +7,7 @@
     
     <!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="singIn.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
     
 
     <!--CZCIONKA-->
@@ -21,33 +21,34 @@
     </head>
 
     <body>
-        <section class="col-xl-5">
-            <form class="form-signin">
-            <div class="text-center">
+      <main>
+        <section>
+          <div class="form-signin col-10 offset-1 mb-5 col-md-6 offset-md-3 col-xl-4 offset-xl-4 py-4">
+            
               <a href="FirstPage.html"><img src="img/logo2.png" alt="Logo strony" width="72" height="72"></a>
-              <h1 class="font-weight-normal">Rejstracja</h1>
+              <h1>Rejstracja</h1>
+
+            <div class="form-label-group pt-2">
+                <input type="text" id="inputName" class="form-control " placeholder="Imie">
             </div>
 
             <div class="form-label-group">
-                <input type="name" id="inputName" class="form-control " placeholder="Imie" required autofocus>
-                <label for="inputName">Imie</label>
-              </div>
-
-            <div class="form-label-group">
-              <input type="email" id="inputEmail" class="form-control " placeholder="Adres email" required autofocus>
-              <label for="inputEmail">Adres email</label>
+              <input type="email" id="inputEmail" class="form-control " placeholder="Adres email">
             </div>
         
             <div class="form-label-group">
-              <input type="password" id="inputPassword" class="form-control" placeholder="Hasło" required>
-              <label for="inputPassword">Hasło</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Hasło">
             </div>
 
-            <button id=button type="submit">Zarejstruj się</button>
-          </form>
+            <p><a class="btn mt-3" id="buttonRegistion" href="FirstPage.html" role="button"> Zarejstruj się</a></p>
+          </div>
         </section>    
-
+      </main>
         
+      <footer class="bg-dark fixed-bottom">
+        <p class="col-5 offset-5 col-md-2 offset-md-5">&copy;  2021</p>
+      </footer>
+
         <!--JavaScript-->
         <script src="jquery-3.2.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>

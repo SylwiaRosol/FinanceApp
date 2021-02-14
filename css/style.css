@@ -1,0 +1,173 @@
+body {
+    padding-top: 3.5rem;
+    background: url('../img/gold-piggy.png') no-repeat;
+    background-size: cover;
+  }
+
+main {
+    
+    color: burlywood;
+    text-align: center;
+}
+
+#navbarsExample03 > ul > li > a {
+    color: burlywood;
+}
+
+#navbarsExample03 > ul > li > a:hover {
+    color:cornsilk;
+}
+#navbarsExample03 > ul > li > #active {
+    color: cornsilk;
+}
+.dropdown-item {
+    color: burlywood;
+}
+.dropdown-item:hover {
+    color: cornsilk;
+    background-color: #212529; 
+}
+.dropdown-menu {
+ background-color: #212529;
+ opacity: 0.9;
+}
+
+
+
+.jumbotron {
+    background-color: transparent !important;  
+    
+}
+.container {
+    background-color:#777;
+    opacity: 0.9;
+}
+
+.form-signin {
+    background-color:#777;
+  	border: 2px solid burlywood;  
+    border-radius: 5px;
+    opacity: 0.9;
+  }
+
+.blockquote p {
+    color: burlywood;
+    font-size: 18px;
+    margin-bottom: 5px !important;
+}
+
+.blockquote {
+    margin-bottom: 5px !important;
+}
+
+
+.icon {
+    float:left;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.icon > label > img {
+    cursor: pointer;
+    
+}
+.icon > label > img:hover {
+    background-color: mediumseagreen;
+}
+.icon > input[type="radio"]:checked + label > img {
+    
+    background-color: cornsilk;
+}
+
+
+#pay {
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+.form-check {
+    float: left;
+}
+.form-check > input[type="radio"] {
+    cursor: pointer;
+}
+
+.form-check > label {
+    cursor: pointer;
+    font-size: 18px;
+    color: cornsilk;
+}
+
+.showBalance {
+  	border: 2px solid burlywood;  
+    border-radius: 5px;
+    color: burlywood;
+}
+
+.form-label-group {
+    margin-bottom: 20px;
+}
+
+
+
+
+h1 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    color:burlywood; 
+}
+h2 {
+    color: cornsilk;
+}
+
+p {
+    color:cornsilk;
+}
+
+.btn {
+    width: 160px;
+    background-color:seagreen;
+    color: burlywood;
+    border: 2px solid burlywood;  
+    border-radius: 5px;
+    font-size: 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    margin-right: 15px;
+}
+.btn:focus{
+    background-color:mediumseagreen;   
+}
+
+.btn:hover{
+    background-color:mediumseagreen;
+}
+
+img {
+    opacity: 0.9;
+}
+.form-label-group > input {
+    border: 2px solid burlywood;
+    border-radius: 5px;
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 60%;
+  }
+
+input:focus {  
+    border: 1px solid chocolate !important;
+    border-radius: 5px !important;
+  }
+
+
+@media (max-width: 767px) {
+    .blockquote p {
+    font-size: 11px;
+    }   
+}
+

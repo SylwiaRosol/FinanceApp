@@ -7,7 +7,7 @@
     
 	<!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/firstPage.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
     
 
@@ -21,7 +21,7 @@
 	<![endif]-->
     </head>
 
-    <body style="margin-bottom: 150px;">
+    <body>
         
         <header>
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
@@ -34,16 +34,16 @@
                 <div class="collapse navbar-collapse" id="navbarsExample03">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                        <a id="active" class="nav-link" href="AfterSingIn.html">Strona główna</a>
+                            <a id="active" class="nav-link" href="AfterSingIn.html">Strona główna</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="AddExpense.html">Dodaj wydatek</a>
+                            <a class="nav-link" href="AddExpense.html">Dodaj wydatek</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="AddIncome.html">Dodaj dochód</a>
+                            <a class="nav-link" href="AddIncome.html">Dodaj dochód</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bilans</a>
+                            <a class="nav-link" href="Balance.html">Bilans</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Ustawienia</a>
@@ -56,24 +56,24 @@
               </nav>
           </header>
       
-          <main class="mt-5"> 
+          <main class="mt-5 pb-sm-5 pb-lg-0"> 
             
-			<div class="container py-2">
+			<div class="container py-2 mb-5">
                 <div class="row">
-                   <div class="col-md-4">
+                   <div class="col-12 col-md-4 pb-sm-5 col-lg-5 pb-lg-0">
                     <picture>
+                        <source media="(max-width: 767px)" srcset="img/revenue.png">
                         <source media="(max-width: 991px)" srcset="img/revenue2.png">
-                        <img class="mg-thumbnail float-left m-3" src="img/revenue.png" style="width:auto" alt="portfel">
+                        <img class="mg-thumbnail float-left m-3" src="img/revenue.png" style="width:auto" alt="grafika przedstawiająca wykres">
                     </picture>
 
                    </div>
-                   <div class="col-md-7 offset-lg-1">
+                   <div class=" col-12 pb-sm-5 col-md-8 col-lg-6 offset-lg-1 pb-lg-0 col-xl-7 offset-xl-0 " style="text-align: left;">
                     <h1 class="text-uppercase pb-3">Twoje możliwości!</h1>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Dodawaj szybko i wygnie swoje przychody i wydatki, określając ich kategorie</p>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Sprawdzaj swój obecny stan finansów, by wiedzieć, czy nie wydajesz za dużo</p>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Dopasuj ustawienia do swoich potrzeb</p>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Ogarnij swój budżet i zmień swoje życie! </p>
-                    
                    </div>
                 </div>
                </div>
@@ -88,5 +88,5 @@
     <script src="jquery-3.2.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-   </body>
+     </body>
     </html>

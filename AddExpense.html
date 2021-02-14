@@ -7,7 +7,7 @@
     
 	<!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/firstPage.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
     
 
@@ -34,16 +34,16 @@
                 <div class="collapse navbar-collapse" id="navbarsExample03">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                        <a class="nav-link" href="AfterSingIn.html">Strona główna</a>
+                            <a class="nav-link" href="AfterSingIn.html">Strona główna</a>
                         </li>
                         <li class="nav-item">
-                        <a id="active" class="nav-link" href="AddExpense.html">Dodaj wydatek</a>
+                            <a id="active" class="nav-link" href="AddExpense.html">Dodaj wydatek</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="AddIncome.html">Dodaj dochód</a>
+                            <a class="nav-link" href="AddIncome.html">Dodaj dochód</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bilans</a>
+                            <a class="nav-link" href="Balance.html">Bilans</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Ustawienia</a>
@@ -56,7 +56,7 @@
               </nav>
           </header>
       
-          <main class="py-4" style="text-align: center;"> 
+          <main class="py-4"> 
             <section>
     			<div class="container py-2">
                 <h1 class="text-uppercase py-1">Dodaj wydatek</h1>
@@ -64,7 +64,7 @@
                 <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4 py-2">
                     <div class="input-group has-validation">
                       <span class="input-group-text"><i class="demo-icon icon-wallet"></i> </span>
-                      <input type="text" class="form-control" id="amount" placeholder="Kwota" required>
+                      <input type="number" class="form-control" id="amount" placeholder="Kwota" required>
                         <div class="invalid-feedback">
                             Podaj kwotę
                         </div>
@@ -83,67 +83,67 @@
                       <h3>Kategorie</h3>
                         <div class="icon">
                             <input type="radio" name="category" id="food" class="input-hidden" style="display:none;"/>
-                            <label for="food"> <img src="img/fast-food.png" alt="Jedzenie"/> <p>Jedzenie</p> </label>
+                            <label for="food"> <img src="img/fast-food.png" alt="Jedzenie"/> </label><p>Jedzenie</p>
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="house" class="input-hidden" style="display:none;"/>
-                            <label for="house"> <img src="img/home.png" alt="Dom"/> <p>Dom</p></label>
+                            <label for="house"> <img src="img/home.png" alt="Dom"/></label><p>Dom</p>
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="transport" class="input-hidden" style="display:none;"/>
-                            <label for="transport"> <img src="img/car.png" alt="Transport"/><p>Transport</p> </label>
+                            <label for="transport"> <img src="img/car.png" alt="Transport"/></label><p>Transport</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="phone" class="input-hidden" style="display:none;"/>
-                            <label for="phone"> <img src="img/phone.png" alt="Telefon"/><p>Telefon</p> </label>
+                            <label for="phone"> <img src="img/phone.png" alt="Telefon"/></label><p>Telefon</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="medicine" class="input-hidden" style="display:none;"/>
-                            <label for="medicine"> <img src="img/medicine.png" alt="Zdrowie"/><p>Zdrowie</p> </label>
+                            <label for="medicine"> <img src="img/medicine.png" alt="Zdrowie"/></label><p>Zdrowie</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="clothes" class="input-hidden" style="display:none;"/>
-                            <label for="clothes"> <img src="img/clothes.png" alt="Ubrania"/><p>Ubrania</p> </label>
+                            <label for="clothes"> <img src="img/clothes.png" alt="Ubrania"/></label><p>Ubrania</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="water" class="input-hidden" style="display:none;"/>
-                            <label for="water"> <img src="img/water.png" alt="Higiena"/><p>Higiena</p> </label>
+                            <label for="water"> <img src="img/water.png" alt="Higiena"/></label><p>Higiena</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="kids" class="input-hidden" style="display:none;"/>
-                            <label for="kids"> <img src="img/kids.png" alt="Dziecko"/><p>Dziecko</p> </label>
+                            <label for="kids"> <img src="img/kids.png" alt="Dziecko"/></label><p>Dziecko</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="pet" class="input-hidden" style="display:none;"/>
-                            <label for="pet"> <img src="img/pet.png" alt="Zwierzę"/><p>Zwierzę</p> </label>
+                            <label for="pet"> <img src="img/pet.png" alt="Zwierzę"/></label><p>Zwierzę</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="party" class="input-hidden" style="display:none;"/>
-                            <label for="party"> <img src="img/party.png" alt="Rozrywka"/><p>Rozrywka</p> </label>
+                            <label for="party"> <img src="img/party.png" alt="Rozrywka"/></label><p>Rozrywka</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="tour" class="input-hidden" style="display:none;"/>
-                            <label for="tour"> <img src="img/tour.png" alt="Wycieczka"/><p>Wycieczka</p> </label>
+                            <label for="tour"> <img src="img/tour.png" alt="Wycieczka"/></label><p>Wycieczka</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="school" class="input-hidden" style="display:none;"/>
-                            <label for="school"> <img src="img/school.png" alt="Szkolenia"/><p>Szkolenia</p> </label>
+                            <label for="school"> <img src="img/school.png" alt="Szkolenia"/></label><p>Szkolenia</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="book" class="input-hidden" style="display:none;"/>
-                            <label for="book"> <img src="img/book.png" alt="Książki"/><p>Książki</p> </label>
+                            <label for="book"> <img src="img/book.png" alt="Książki"/></label><p>Książki</p> 
                         </div>
                         <div class="icon">
                           <input type="radio" name="category" id="coin" class="input-hidden" style="display:none;"/>
-                          <label for="coin"> <img src="img/coin.png" alt="Długi"/><p>Długi</p> </label>
+                          <label for="coin"> <img src="img/coin.png" alt="Długi"/></label><p>Długi</p> 
                       </div>
                       <div class="icon">
                            <input type="radio" name="category" id="investments" class="input-hidden" style="display:none;"/>
-                           <label for="investments"> <img src="img/inwestycje.png" alt="Inwestycje"/><p>Inwestycje</p> </label>
+                           <label for="investments"> <img src="img/inwestycje.png" alt="Inwestycje"/></label><p>Inwestycje</p>
                         </div>
                         <div class="icon">
                            <input type="radio" name="category" id="gift" class="input-hidden" style="display:none;"/>
-                           <label for="gift"> <img src="img/gift.png" alt="Darowizna"/><p>Darowizna</p> </label>
+                           <label for="gift"> <img src="img/gift.png" alt="Darowizna"/></label><p>Darowizna</p>
                         </div>
                         <div style="clear: both;"></div>
                   </div>
@@ -151,18 +151,18 @@
 
                   <h3 class="mb-3">Sposób płatności</h3>
                 
-                <div class="col-12  col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-5 offset-xl-4 py-2">
-                  <div class="form-check mr-3">
+                <div class="d-block col-12  col-md-8 offset-md-2 col-xl-6 offset-xl-3 py-2">
+                  <div class="form-check mr-3 mr-lg-5">
                     <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
-                    <label class="form-check-label" for="credit"><p>Karta kredytowa</p></label>
+                    <label class="form-check-label" for="credit">Karta kredytowa</label>
                   </div>
-                  <div class="form-check mr-3">
+                  <div class="form-check mr-3 mr-lg-5">
                     <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label class="form-check-label" for="debit"> <p>Karta debetowa</p></label>
+                    <label class="form-check-label" for="debit">Karta debetowa</label>
                   </div>
                   <div class="form-check">
                     <input id="cash" name="paymentMethod" type="radio" class="form-check-input" required>
-                    <label class="form-check-label" for="cash"><p>Cash</p></label>
+                    <label class="form-check-label" for="cash">Gotówka</label>
                   </div>
                 </div>
                 <div style="clear: both;"></div>
@@ -177,8 +177,8 @@
 
 
                 <div class= "col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-7 offset-xl-3 py-2 mb-4">
-                  <p class="ml-2 mr-xl-4" style="float: left;"><a class="btn" id="button" href="#" role="button"> Dodaj</a></p>
-                  <p class="ml-xl-5"><a class="btn" id="button" href="AfterSingIn.html" role="button">Wróć</a></p>  
+                  <p class="ml-2 mr-xl-4" style="float: left;"><a class="btn" id="addExpense" href="#" role="button"> Dodaj</a></p>
+                  <p class="ml-xl-5"><a class="btn" id="back" href="AfterSingIn.html" role="button">Wróć</a></p>  
                 </div>
 
             </div>

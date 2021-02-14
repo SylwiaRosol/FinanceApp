@@ -7,7 +7,7 @@
     
 	<!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/firstPage.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
     
 
@@ -34,16 +34,16 @@
                 <div class="collapse navbar-collapse" id="navbarsExample03">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                        <a class="nav-link" href="AfterSingIn.html">Strona główna</a>
+                            <a class="nav-link" href="AfterSingIn.html">Strona główna</a>
                         </li>
                         <li class="nav-item">
-                        <a class="nav-link" href="AddIncome.html">Dodaj wydatek</a>
+                            <a class="nav-link" href="AddIncome.html">Dodaj wydatek</a>
                         </li>
                         <li class="nav-item">
-                        <a  id="active" class="nav-link" href="AddIncome.html">Dodaj dochód</a>
+                            <a  id="active" class="nav-link" href="AddIncome.html">Dodaj dochód</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Bilans</a>
+                            <a class="nav-link" href="Balance.html">Bilans</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Ustawienia</a>
@@ -56,7 +56,7 @@
               </nav>
           </header>
       
-          <main class="py-4" style="text-align: center;"> 
+          <main class="py-4"> 
             <section>
     			<div class="container py-2">
                 <h1 class="text-uppercase py-1">Dodaj dochód</h1>
@@ -64,7 +64,7 @@
                 <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4 py-2">
                     <div class="input-group has-validation">
                       <span class="input-group-text"><i class="demo-icon icon-wallet"></i> </span>
-                      <input type="text" class="form-control" id="amount" placeholder="Kwota" required>
+                      <input type="number" class="form-control" id="amount" placeholder="Kwota" required>
                         <div class="invalid-feedback">
                             Podaj kwotę
                         </div>
@@ -82,19 +82,19 @@
                   <div class="category col-12 col-lg-8 offset-lg-2 col-xl-8 offset-xl-3">  
                         <div class="icon">
                           <input type="radio" name="category" id="payment" class="input-hidden" style="display:none;"/>
-                          <label for="payment"> <img src="img/payemnt.png" alt="Wypłata"/><p>Wynagrodzenie</p> </label>
+                          <label for="payment"> <img src="img/payemnt.png" alt="Wypłata"/></label><p>Wynagrodzenie</p> 
                       </div>
                       <div class="icon">
                            <input type="radio" name="category" id="chart" class="input-hidden" style="display:none;"/>
-                           <label for="chart"> <img src="img/chart.png" alt="Odsetki bankowe"/><p>Odsetki bankowe</p> </label>
+                           <label for="chart"> <img src="img/chart.png" alt="Odsetki bankowe"/></label><p>Odsetki bankowe</p> 
                         </div>
                         <div class="icon">
                            <input type="radio" name="category" id="sale" class="input-hidden" style="display:none;"/>
-                           <label for="sale"> <img src="img/sale.png" alt="Sprzedarz na allegro"/><p>Sprzedarz na allegro</p> </label>
+                           <label for="sale"> <img src="img/sale.png" alt="Sprzedarz na allegro"/></label><p>Sprzedarz na allegro</p> 
                         </div>
                         <div class="icon">
                             <input type="radio" name="category" id="money" class="input-hidden" style="display:none;"/>
-                            <label for="money"> <img src="img/money.png" alt="Inne"/><p>Inne</p> </label>
+                            <label for="money"> <img src="img/money.png" alt="Inne"/></label><p>Inne</p> 
                          </div>
                         <div style="clear: both;"></div>
                   </div>
@@ -108,8 +108,8 @@
                 </div>
 
                 <div class= "col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-7 offset-xl-3  mt-2">
-                    <p class="ml-2 mr-xl-4" style="float: left;"><a class="btn" id="button" href="#" role="button"> Dodaj</a></p>
-                    <p class="ml-xl-5"><a class="btn" id="button" href="AfterSingIn.html" role="button">Wróć</a></p>  
+                    <p class="ml-2 mr-xl-4" style="float: left;"><a class="btn" id="addIncome" href="#" role="button"> Dodaj</a></p>
+                    <p class="ml-xl-5"><a class="btn" id="back" href="AfterSingIn.html" role="button">Wróć</a></p>  
                 </div>
 
             </div>

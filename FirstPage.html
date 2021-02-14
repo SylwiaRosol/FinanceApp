@@ -7,7 +7,7 @@
     
 	<!--CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/firstPage.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">
     <link rel="stylesheet" href="fontello/css/fontello.css" type="text/css">
     
 
@@ -33,35 +33,39 @@
 		  <main class="pb-4">
 	  
 			<div class="jumbotron pb-3">
-			  <div class="container py-1">
-				  
-
-			<picture>
-					<source media="(max-width: 767px)" srcset="img/personal_finance2.png">
-					<img class="mg-thumbnail float-right ml-3 mt-2" src="img/personal_finance.png" style="width:auto" alt="wykresy">
-			</picture>
-				<h1 class="text-uppercase">Zarządzaj swoim budżetem!</h1>
-					<p><i class="demo-icon icon-dollar"></i> Dołącz do użytkowników aplikacji</p>
-					<p><i class="demo-icon icon-dollar"></i> Dowiedz się, gdzie się podziały twoje pieniądze</p>
-					<p><i class="demo-icon icon-dollar"></i> Wskaż swoim pieniądzom, dokąd mają iść</p>
+			  <div class="container py-1" style="text-align: left;">
+				<div class="row">
+				
+				<div class="col-10 offset-1 col-md-8 offset-md-0">
+					<h1 class="text-uppercase">Zarządzaj swoim budżetem!</h1>
+						<p><i class="demo-icon icon-dollar"></i> Dołącz do użytkowników aplikacji</p>
+						<p><i class="demo-icon icon-dollar"></i> Dowiedz się, gdzie się podziały twoje pieniądze</p>
+						<p><i class="demo-icon icon-dollar"></i> Wskaż swoim pieniądzom, dokąd mają iść</p>
 					
-				<p><a class="btn float-left" id="button" href="SingIn.html" role="button"> Zaloguj się</a></p>
-				<p><a class="btn" id="button" href="Registration.html" role="button"> Zarejstruj się</a></p>
-			  
-			  </div>
+					<p><a class="btn float-left" id="singIn" href="SingIn.html" role="button"> Zaloguj się</a></p>
+					<p><a class="btn" id="registration" href="Registration.html" role="button"> Zarejstruj się</a></p>
+				</div>
+				<div class="col-6 offset-2 mb-4 col-md-2 offset-md-2 mb-md-0">
+					<picture>
+						<source media="(max-width: 991px)" srcset="img/personal_finance2.png">
+						<source media="(max-width: 767px)" srcset="img/personal_finance.png">
+						<img class="mg-thumbnail float-right ml-3 mt-2" src="img/personal_finance.png" style="width:auto" alt="grafika przedstawiająca mężczyznę i wykresy">
+					</picture>
+				</div>
+				</div>
+				</div>
 			</div>
 	  
-			<div class="container">
+			<div class="container my-3">
 			 <div class="row">
 				<div class="col-md-5">
-				  <h2>Dlaczego warto?</h2>
+				  <h2 style="color: burlywood;">Dlaczego warto?</h2>
 				  <p>Aplikacja umożliwia szybko ogarnąć własne wydatki i dochody. Dowiesz się na co wydajesz pieniądze, dzięki czemu lepiej będziesz mógł je gospodarować.</p>
 				
 				</div>
 				<div class="col-md-5 offset-md-2">
-				  <h2>Jak skorzystać z aplikacji?</h2>
+				  <h2  style="color: burlywood;">Jak skorzystać z aplikacji?</h2>
 				  <p>To proste! Wystarczy zarejstrować się podając swoje imię, adres email oraz ustawić hasło bezpieczeństwa. Jeśli jesteś zarejstrowany, kliknij przycisk "Zaloguj się".</p>
-				  
 				</div>
 			 </div>
 			</div>
@@ -75,6 +79,6 @@
 		<!--JavaScript-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		
-		  </body>
-		  </html>
+				  
+		</body>
+	</html>
