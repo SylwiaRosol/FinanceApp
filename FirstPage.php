@@ -1,3 +1,30 @@
+<?php
+
+	session_start();
+	
+	if (!isset($_SESSION['registrationIsGood']))
+	{
+		header('Location: Registration.php');
+		exit();
+	}
+	else
+	{
+		unset($_SESSION['registrationIsGood']);
+	}
+	
+	//Usuwanie zmiennych pamiętających wartości wpisane do formularza
+	if (isset($_SESSION['fr_inputName'])) unset($_SESSION['fr_inputName']);
+	if (isset($_SESSION['fr_inputEmail'])) unset($_SESSION['fr_inputEmail']);
+	if (isset($_SESSION['fr_inputPassword1'])) unset($_SESSION['fr_inputPassword1']);
+	if (isset($_SESSION['fr_inputPassword2'])) unset($_SESSION['fr_inputPassword2']);
+	
+	//Usuwanie błędów rejestracji
+	if (isset($_SESSION['e_email'])) unset($_SESSION['e_email']);
+	if (isset($_SESSION['e_password'])) unset($_SESSION['e_password']);
+	
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
