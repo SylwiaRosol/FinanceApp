@@ -1,8 +1,8 @@
 <?php
 
-return [
-	'host' => 'localhost', 
-	'user' => 'root',
-	'password' => '',
-	'database' => 'db'
-];
+	$host = "localhost";
+	$db_user = "root";
+	$db_password = "";
+	$db_name = "db";
+
+?>

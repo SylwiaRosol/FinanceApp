@@ -1,30 +1,3 @@
-<?php
-
-	session_start();
-	
-	if (!isset($_SESSION['registrationIsGood']))
-	{
-		header('Location: Registration.php');
-		exit();
-	}
-	else
-	{
-		unset($_SESSION['registrationIsGood']);
-	}
-	
-	//Usuwanie zmiennych pamiętających wartości wpisane do formularza
-	if (isset($_SESSION['fr_inputName'])) unset($_SESSION['fr_inputName']);
-	if (isset($_SESSION['fr_inputEmail'])) unset($_SESSION['fr_inputEmail']);
-	if (isset($_SESSION['fr_inputPassword1'])) unset($_SESSION['fr_inputPassword1']);
-	if (isset($_SESSION['fr_inputPassword2'])) unset($_SESSION['fr_inputPassword2']);
-	
-	//Usuwanie błędów rejestracji
-	if (isset($_SESSION['e_email'])) unset($_SESSION['e_email']);
-	if (isset($_SESSION['e_password'])) unset($_SESSION['e_password']);
-	
-?>
-
-
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -69,8 +42,8 @@
 						<p><i class="demo-icon icon-dollar"></i> Dowiedz się, gdzie się podziały twoje pieniądze</p>
 						<p><i class="demo-icon icon-dollar"></i> Wskaż swoim pieniądzom, dokąd mają iść</p>
 					
-					<p><a class="btn float-left" id="singIn" href="SingIn.html" role="button"> Zaloguj się</a></p>
-					<p><a class="btn" id="registration" href="Registration.html" role="button"> Zarejstruj się</a></p>
+						<p><a class="btn float-left" id="buttonSingIn" href="SingIn.php" role="button"> Zaloguj się</a></p>
+						<p><a class="btn" id="buttonRegistration" href="Registration.php" role="button"> Zarejestruj się</a></p>
 				</div>
 				<div class="col-6 offset-2 mb-4 col-md-2 offset-md-2 mb-md-0">
 					<picture>

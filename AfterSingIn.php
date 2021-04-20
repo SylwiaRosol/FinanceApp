@@ -1,3 +1,16 @@
+<?php
+
+
+session_start();
+
+if (!isset($_SESSION['logged'])) {
+    header ('Location: FirstPage.php');
+    exit();
+}
+
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -49,7 +62,13 @@
                             <a class="nav-link" href="#">Ustawienia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="FirstPage.html">Wyloguj się</a>
+                            <a class="nav-link" value= "<?php
+                                 unset($_SESSION['logged']);
+                                 unset($_SESSION['id']);
+                                 unset($_SESSION['username']);
+                                 unset($_SESSION['password']);
+                                 unset($_SESSION['email']);
+                            ?>" href="FirstPage.php">Wyloguj się</a>
                         </li>      
                     </ul>
                 </div>

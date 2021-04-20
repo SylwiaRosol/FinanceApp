@@ -7,6 +7,10 @@ if (isset($_POST['inputName']))
 		$itIsGood=true;
 		
 		$name = $_POST['inputName'];
+		if (strlen($name) < 3) {
+			$itIsGood=false;
+			$_SESSION['e_name']="Imię musi mieć co najmniej 3 litery!";
+		}
 		
 		$email = $_POST['inputEmail'];
 		$emailB = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -41,10 +45,18 @@ if (isset($_POST['inputName']))
 		$_SESSION['fr_inputPassword1'] = $password1;
 		$_SESSION['fr_inputPassword2'] = $password2;
 		
-		require_once "database.php";
+		require_once "connect.php";
 		mysqli_report(MYSQLI_REPORT_STRICT);
-			$query = $db->query("SELECT id FROM user WHERE email='$email'");
-			if(!$query) throw new Exception($db->error);
+		
+		try 
+		{
+			$db = new mysqli($host, $db_user, $db_password, $db_name);
+		
+			$query = $db->query("SELECT id FROM users WHERE  email='$email'");
+			
+			if(!$query) {
+				 throw new Exception($db->error);
+			} else {
 
 			$howMany = $query->num_rows;
 			if($howMany>0) {
@@ -56,14 +68,26 @@ if (isset($_POST['inputName']))
 
 				if ($db->query("INSERT INTO users VALUES (NULL, '$name', '$password_hash', '$email')")) {
 					$_SESSION['registrationIsGood']=true;
-					header('Location: FirstPage.php');
+
+					$db->query("INSERT INTO incomes_category_assigned_to_users (user_id, name) SELECT users.id, incomes_category_default.name FROM users, incomes_category_default WHERE users.username='$name'");
+					$db->query("INSERT INTO expenses_category_assigned_to_users (user_id, name) SELECT users.id, expenses_category_default.name FROM users, expenses_category_default WHERE users.username='$name'");
+					$db->query("INSERT INTO  payment_methods_assigned_to_users (user_id, name) SELECT users.id, payment_methods_default.name FROM users, payment_methods_default WHERE users.username='$name'");
+							
+
+					header('Location: Save.php');
 				}
 				else{
 					throw new Exception($db->error);
 				}
 			
-			}
+			}}
 			$db->close();
+		}
+		catch(Exception $e)
+		{
+			echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy o rejestrację w innym terminie!</span>';
+			echo '<br />Informacja developerska: '.$e;
+		}
 		}
 ?>
 
@@ -73,7 +97,7 @@ if (isset($_POST['inputName']))
 <html lang="pl">
 <head>
 	<meta charset="utf-8" />
-    <title>Rejstracja</title>
+    <title>Rejestracja</title>
     <link rel="shortcut icon" href="img/dollar.png" type="image/png">
     
     <!--CSS-->
@@ -94,12 +118,13 @@ if (isset($_POST['inputName']))
     <body>
       <main>
         <section>
-        <form>
+        <form method="post">
 		  <div class="form-signin col-10 offset-1 mb-5 col-md-6 offset-md-3 col-xl-4 offset-xl-4 py-4">
             
               <a href="FirstPage.html"><img src="img/logo2.png" alt="Logo strony" width="72" height="72"></a>
-              <h1>Rejstracja</h1>
+              <h1>Rejestracja</h1>
 		
+
             <div class="form-label-group pt-2">
                 <input type="text" id="inputName" value="<?php
 			if (isset($_SESSION['fr_inputName']))
@@ -107,8 +132,15 @@ if (isset($_POST['inputName']))
 				echo $_SESSION['fr_inputName'];
 				unset($_SESSION['fr_inputName']);
 			}?>" name="inputName" class="form-control " placeholder="Imie">
-            </div>	
+            </div>
 
+			<?php
+			if (isset($_SESSION['e_name']))
+			{
+				echo '<div>'.$_SESSION['e_name'].'</div>';
+				unset($_SESSION['e_name']);
+			}
+			?>
 
             <div class="form-label-group">
               <input type="email" id="inputEmail" value="<?php
