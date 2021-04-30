@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 15 Mar 2021, 20:31
+-- Czas generowania: 30 Kwi 2021, 14:56
 -- Wersja serwera: 10.4.8-MariaDB
 -- Wersja PHP: 7.3.11
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `finance`
+-- Baza danych: `dbfinance`
 --
 
 -- --------------------------------------------------------
@@ -77,8 +77,8 @@ INSERT INTO `expenses_category_default` (`id`, `name`) VALUES
 (9, 'Kids'),
 (10, 'Recreation'),
 (11, 'Trip'),
-(12, 'Savings'),
-(13, 'For Retirement'),
+(12, 'Pet'),
+(13, 'Investments'),
 (14, 'Debt Repayment'),
 (15, 'Gift'),
 (16, 'Another');
