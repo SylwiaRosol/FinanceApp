@@ -6,6 +6,9 @@ if (!isset($_SESSION['logged'])) {
     header ('Location: FirstPage.php');
     exit();
 }
+if (isset($e_amount)) {
+    unset($e_amount);
+}
 
 ?>
 
@@ -82,12 +85,12 @@ if (!isset($_SESSION['logged'])) {
                    </div>
                    <div class=" col-12 pb-sm-5 col-md-8 col-lg-6 offset-lg-1 pb-lg-0 col-xl-7 offset-xl-0 " style="text-align: left;">
                     <h1 class="text-uppercase pb-3"><?php if(isset($_SESSION['addIncomes'])) {
-                        echo "Dochód został dodany. Oto twoje możliwości:";
+                        echo "Dochód został dodany.<br> Oto twoje możliwości:";
                         unset($_SESSION['addIncomes']);
                     } else if (isset($_SESSION['addExpenses'])) {
-                        echo "Wydatek został dodany. Oto twoje możliwości:";
+                        echo "Wydatek został dodany.<br> Oto twoje możliwości:";
                         unset($_SESSION['addExpenses']);
-                    } else { echo "Witaj ".$_SESSION['username']."! Oto Twoje możliwości:";
+                    } else { echo 'Witaj '.$_SESSION['username'].'!<br>Oto Twoje możliwości:';
                     }?></h1>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Dodawaj szybko i wygodnie swoje przychody i wydatki, określając ich kategorie</p>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Sprawdzaj swój obecny stan finansów, by wiedzieć, czy nie wydajesz za dużo</p>

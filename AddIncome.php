@@ -14,11 +14,16 @@ if(isset($_POST['category'])) {
     $date = $_POST['date'];
     $category = $_POST['category'];
     $userId = $_SESSION['id'];
+    $itGood = true;
 
         if(isset($_POST['coment'])) {
             $coment = $_POST['coment'];
         }
-
+        if($amount <=0) {
+         $e_amount = 'Podana kwota jest błędna'; 
+         $itGood = false;  
+        }
+if ($itGood == true) {
     require_once "connect.php";
     mysqli_report(MYSQLI_REPORT_STRICT);
 
@@ -47,9 +52,10 @@ try {
 catch(Exception $e)	{
     echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i prosimy o rejestrację w innym terminie!</span>';
     echo '<br />Informacja developerska: '.$e;
-}
+} 
+
     $db->close();
-}
+}}
 ?>
 
 <!DOCTYPE HTML>
@@ -91,7 +97,7 @@ catch(Exception $e)	{
                             <a class="nav-link" href="AfterSingIn.php">Strona główna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AddIncome.php">Dodaj wydatek</a>
+                            <a class="nav-link" href="AddExpense.php">Dodaj wydatek</a>
                         </li>
                         <li class="nav-item">
                             <a  id="active" class="nav-link" href="AddIncome.php">Dodaj dochód</a>
@@ -124,6 +130,9 @@ catch(Exception $e)	{
                             Podaj kwotę
                         </div>
                     </div>
+                    <?php if (isset($e_amount)) {
+                          echo $e_amount;
+                      } ?>
                 </div>
 
                 <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4 py-2">
@@ -161,9 +170,9 @@ catch(Exception $e)	{
                       <input type="text" class="form-control" name="coment" id="coment" placeholder="Komentarz" required>
                     </div>
                 </div>
-                <div class= "col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-7 offset-xl-3  mt-2">
-                    <input class="btn ml-2 mr-xl-4" style="float: left;" id="addIncome" type="submit" value="Dodaj"/>
-                    <p class="ml-xl-5"><a class="btn" id="back" href="AfterSingIn.html" role="button">Wróć</a></p>  
+                <div class= "col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-5 offset-xl-4 mt-2">
+                    <input class="btn" style="float: left;" id="addIncome" type="submit" value="Dodaj"/>
+                    <p><a class="btn" id="back" href="AfterSingIn.php" role="button">Wróć</a></p>  
                 </div>
 
             </div>
@@ -173,7 +182,7 @@ catch(Exception $e)	{
           </main>
 
           <footer class="bg-dark fixed-bottom">
-            <p class="col-5 offset-5 col-md-2 offset-md-5">&copy;  2021</p>
+            <p class="col-5 offset-5 col-md-2 offset-md-6">&copy;  2021</p>
           </footer>
       
 

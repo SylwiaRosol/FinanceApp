@@ -15,12 +15,16 @@ $date = $_POST['date'];
 $category = $_POST['category'];
 $payment = $_POST['paymentMethod'];
 $userId = $_SESSION['id'];
-
+$itGood = true;
 
     if(isset($_POST['coment'])) {
         $coment = $_POST['coment'];
     }
-
+    if($amount <=0) {
+        $e_amount = 'Podana kwota jest błędna'; 
+        $itGood = false;  
+       }
+if ($itGood == true) {
 require_once "connect.php";
 mysqli_report(MYSQLI_REPORT_STRICT);
 
@@ -58,7 +62,7 @@ echo '<span style="color:red;">Błąd serwera! Przepraszamy za niedogodności i 
 echo '<br />Informacja developerska: '.$e;
 }
 $db->close();
-}
+}}
 
 ?>
 
@@ -134,6 +138,9 @@ $db->close();
                             Podaj kwotę
                         </div>
                     </div>
+                    <?php if (isset($e_amount)) {
+                          echo $e_amount;
+                      } ?>
                 </div>
 
                 <div class="col-8 offset-2 col-sm-6 offset-sm-3 col-lg-4 offset-lg-4 py-2">
@@ -188,11 +195,11 @@ $db->close();
                             <label for="party"> <img src="img/party.png" alt="Rozrywka"/></label><p>Rozrywka</p> 
                         </div>
                         <div class="icon">
-                            <input type="radio" name="category" id="tour" value="Trip" class="input-hidden" style="display:none;"/>
-                            <label for="tour"> <img src="img/tour.png" alt="Wycieczka"/></label><p>Wycieczka</p> 
+                            <input type="radio" name="category" id="trip" value="Trip" class="input-hidden" style="display:none;"/>
+                            <label for="trip"> <img src="img/tour.png" alt="Wycieczka"/></label><p>Wycieczka</p> 
                         </div>
                         <div class="icon">
-                            <input type="radio" name="category" id="pet"value="Pet" class="input-hidden" style="display:none;"/>
+                            <input type="radio" name="category" id="pet" value="Pet" class="input-hidden" style="display:none;"/>
                             <label for="pet"> <img src="img/pet.png" alt="Zwierzę"/></label><p>Zwierzę</p> 
                         </div>
                       <div class="icon">
@@ -204,7 +211,7 @@ $db->close();
                           <label for="coin"> <img src="img/coin.png" alt="Długi"/></label><p>Długi</p> 
                       </div>
                       <div class="icon">
-                           <input type="radio" name="category" id="gift"value='Gift' class="input-hidden" style="display:none;"/>
+                           <input type="radio" name="category" id="gift" value='Gift' class="input-hidden" style="display:none;"/>
                            <label for="gift"> <img src="img/gift.png" alt="Darowizna"/></label><p>Darowizna</p>
                         </div>
                         <div class="icon">
@@ -242,9 +249,9 @@ $db->close();
                 </div>
 
 
-                <div class= "col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-7 offset-xl-3 py-2 mb-4">
+                <div class= "col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-5 offset-xl-4 py-2 mb-4">
                   <input class="btn ml-2 mr-xl-4" style="float: left;" id="addExpense" type="submit" value="Dodaj"/>
-                  <p class="ml-xl-5"><a class="btn" id="back" href="AfterSingIn.html" role="button">Wróć</a></p>  
+                  <p class="ml-xl-5"><a class="btn" id="back" href="AfterSingIn.php" role="button">Wróć</a></p>  
                 </div>
 
             </div>
@@ -254,7 +261,7 @@ $db->close();
           </main>
 
           <footer class="bg-dark fixed-bottom">
-            <p class="col-5 offset-5 col-md-2 offset-md-5">&copy;  2021</p>
+            <p class="col-5 offset-5 col-md-2 offset-md-6">&copy;  2021</p>
           </footer>
       
 
