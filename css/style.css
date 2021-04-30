@@ -141,11 +141,14 @@ p {
     margin-right: 15px;
 }
 .btn:focus{
-    background-color:mediumseagreen;   
+    background-color:mediumseagreen;
+    color: burlywood !important;
+       
 }
 
 .btn:hover{
     background-color:mediumseagreen;
+    color: burlywood !important;
 }
 
 img {
@@ -163,6 +166,7 @@ input:focus {
     border: 1px solid chocolate !important;
     border-radius: 5px !important;
   }
+
 
 
 @media (max-width: 767px) {

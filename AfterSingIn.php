@@ -1,3 +1,18 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['logged'])) {
+    header ('Location: FirstPage.php');
+    exit();
+}
+if (isset($e_amount)) {
+    unset($e_amount);
+}
+
+?>
+
+
 <!DOCTYPE HTML>
 <html lang="pl">
 <head>
@@ -25,7 +40,7 @@
         
         <header>
             <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-                <a class="navbar-brand col-1" href="AfterSingIn.html"> <img src="img/logo2.png" alt="Logo aplikacji" width="50" height="50"></a>
+                <a class="navbar-brand col-1" href="AfterSingIn.php"> <img src="img/logo2.png" alt="Logo aplikacji" width="50" height="50"></a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample03" aria-controls="navbarsExample03" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -34,22 +49,22 @@
                 <div class="collapse navbar-collapse" id="navbarsExample03">
                     <ul class="navbar-nav me-auto mb-2 mb-sm-0">
                         <li class="nav-item">
-                            <a id="active" class="nav-link" href="AfterSingIn.html">Strona główna</a>
+                            <a id="active" class="nav-link" href="AfterSingIn.php">Strona główna</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AddExpense.html">Dodaj wydatek</a>
+                            <a class="nav-link" href="AddExpense.php">Dodaj wydatek</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="AddIncome.html">Dodaj dochód</a>
+                            <a class="nav-link" href="AddIncome.php">Dodaj dochód</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Balance.html">Bilans</a>
+                            <a class="nav-link" href="Balance.php">Bilans</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Ustawienia</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="FirstPage.html">Wyloguj się</a>
+                            <a class="nav-link" href="LogOut.php">Wyloguj się</a>
                         </li>      
                     </ul>
                 </div>
@@ -69,8 +84,15 @@
 
                    </div>
                    <div class=" col-12 pb-sm-5 col-md-8 col-lg-6 offset-lg-1 pb-lg-0 col-xl-7 offset-xl-0 " style="text-align: left;">
-                    <h1 class="text-uppercase pb-3">Twoje możliwości!</h1>
-                    <p class="pb-1"><i class="demo-icon icon-money-1"></i> Dodawaj szybko i wygnie swoje przychody i wydatki, określając ich kategorie</p>
+                    <h1 class="text-uppercase pb-3"><?php if(isset($_SESSION['addIncomes'])) {
+                        echo "Dochód został dodany.<br> Oto twoje możliwości:";
+                        unset($_SESSION['addIncomes']);
+                    } else if (isset($_SESSION['addExpenses'])) {
+                        echo "Wydatek został dodany.<br> Oto twoje możliwości:";
+                        unset($_SESSION['addExpenses']);
+                    } else { echo 'Witaj '.$_SESSION['username'].'!<br>Oto Twoje możliwości:';
+                    }?></h1>
+                    <p class="pb-1"><i class="demo-icon icon-money-1"></i> Dodawaj szybko i wygodnie swoje przychody i wydatki, określając ich kategorie</p>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Sprawdzaj swój obecny stan finansów, by wiedzieć, czy nie wydajesz za dużo</p>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Dopasuj ustawienia do swoich potrzeb</p>
                     <p class="pb-1"><i class="demo-icon icon-money-1"></i> Ogarnij swój budżet i zmień swoje życie! </p>

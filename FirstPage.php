@@ -42,8 +42,8 @@
 						<p><i class="demo-icon icon-dollar"></i> Dowiedz się, gdzie się podziały twoje pieniądze</p>
 						<p><i class="demo-icon icon-dollar"></i> Wskaż swoim pieniądzom, dokąd mają iść</p>
 					
-					<p><a class="btn float-left" id="singIn" href="SingIn.html" role="button"> Zaloguj się</a></p>
-					<p><a class="btn" id="registration" href="Registration.html" role="button"> Zarejstruj się</a></p>
+						<p><a class="btn float-left" id="buttonSingIn" href="SingIn.php" role="button"> Zaloguj się</a></p>
+						<p><a class="btn" id="buttonRegistration" href="Registration.php" role="button"> Zarejestruj się</a></p>
 				</div>
 				<div class="col-6 offset-2 mb-4 col-md-2 offset-md-2 mb-md-0">
 					<picture>
