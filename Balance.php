@@ -13,6 +13,22 @@ require_once "connect.php";
 mysqli_report(MYSQLI_REPORT_STRICT);
 
 try {
+$date = new DateTime();
+$thisMonth = $date->format('Y-m-01');
+$last = $date->format('m')-1;
+
+if($date->format('m') < 10) {
+$lastMonth = $date->format('Y-0'.$last.'-01');
+} else {
+  $lastMonth = $date->format('Y-'.$last.'-01');
+}
+
+if((!isset($_POST['thisMonth'])) && (!isset($_POST['lastMonth']))) {
+  $_POST['thisMonth'] = true;
+}
+
+
+
 $db = new mysqli($host, $db_user, $db_password, $db_name);
 
 $query1= $db->query("SELECT * FROM incomes WHERE user_id='$userId'");
@@ -20,7 +36,7 @@ $query1= $db->query("SELECT * FROM incomes WHERE user_id='$userId'");
         throw new Exception($db->error);
     }
         
-  $query3= $db->query("SELECT * FROM expenses WHERE user_id='$userId'");
+$query3= $db->query("SELECT * FROM expenses WHERE user_id='$userId'");
     if(!$query3) {
       throw new Exception($db->error);
     }
@@ -85,11 +101,13 @@ catch(Exception $e)	{
                             <a class="nav-link" href="LogOut.php">Wyloguj się</a>
                         </li>   
                         <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Okres rozliczeniowy</a>
+                          <button type="submit" class="nav-link dropdown-toggle" style="background-color: transparent !important; color: burlywood; border: 2px solid burlywood; border-radius: 5px; cursor: pointer;" id="dropdown03" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Okres rozliczeniowy </button>
                           <div class="dropdown-menu" aria-labelledby="dropdown03">
-                            <a class="dropdown-item" href="#">Obecny miesiąc</a>
-                            <a class="dropdown-item" href="#">Poprzedni miesiąc</a>
+                        <form method="post" action="Balance.php">
+                            <input type="submit" class="dropdown-item" name ="thisMonth" id="thisMonth" value="Obecny miesiąc"/>
+                            <input type="submit" class="dropdown-item" name="lastMonth" id="lastMonth" value="Poprzedni miesiąc"/>
                             <a class="dropdown-item" href="#">Niestandardowy</a>
+                        </form>
                           </div>
                         </li> 
                     </ul>
@@ -123,7 +141,8 @@ catch(Exception $e)	{
 
                           $query2 = $db->query("SELECT * FROM incomes_category_assigned_to_users WHERE id='$category'");
                           $row2=$query2->fetch_assoc();
-
+                          if (isset($_POST['thisMonth'])) {
+                          if($row1['date_of_income'] >= $thisMonth) {
                           $all_incomes += $row1['amount'];
                             echo '<tr>
                                       <td>'.$row1['amount'].'</td>
@@ -131,6 +150,16 @@ catch(Exception $e)	{
                                       <td>'.$row2['name'].'</td>
                                       <td>'.$row1['income_comment'].'</td>';
                           }
+                        } else if(isset($_POST['lastMonth'])) {
+                            if(($row1['date_of_income'] >= $lastMonth) && ($row1['date_of_income'] < $thisMonth)) {
+                              $all_incomes += $row1['amount'];
+                              echo '<tr>
+                                        <td>'.$row1['amount'].'</td>
+                                        <td>'.$row1['date_of_income'].'</td>
+                                        <td>'.$row2['name'].'</td>
+                                        <td>'.$row1['income_comment'].'</td>';
+                            }}
+                        }
                           ?>
                         </tbody>
                         </table>
@@ -163,7 +192,8 @@ catch(Exception $e)	{
 
                           $query5 = $db->query("SELECT * FROM payment_methods_assigned_to_users WHERE id='$category_payment'");
                           $row5=$query5->fetch_assoc();  
-                          
+                          if(isset($_POST['thisMonth'])) {
+                          if($row3['date_of_expense'] >= $thisMonth) {
                           $all_expenses += $row3['amount'];
                           echo '<tr>
                                       <td>'.$row3['amount'].'</td>
@@ -171,7 +201,20 @@ catch(Exception $e)	{
                                       <td>'.$row4['name'].'</td>
                                       <td>'.$row5['name'].'</td>
                                       <td>'.$row3['expense_comment'].'</td>';
-                          }
+                                    } 
+                          } else if (isset($_POST['lastMonth'])) {
+                            if(($row3['date_of_expense'] >= $lastMonth) && ($row3['date_of_expense'] < $thisMonth)) {
+                              $all_expenses += $row3['amount'];
+                              echo '<tr>
+                                          <td>'.$row3['amount'].'</td>
+                                          <td>'.$row3['date_of_expense'].'</td>
+                                          <td>'.$row4['name'].'</td>
+                                          <td>'.$row5['name'].'</td>
+                                          <td>'.$row3['expense_comment'].'</td>';
+                                        }
+                          } 
+                        } unset($_POST['lastMonth']); 
+                          unset($_POST['thisMonth']);
                           ?>
                         </tbody>
                         </table>
@@ -191,7 +234,7 @@ catch(Exception $e)	{
                      <?php $all_amount = $all_incomes - $all_expenses;
                      if($all_amount>0) {
                          echo '<h1>Brawo! Świetnie zarządzasz swoim budżetem!</h1>';
-                        } else if ($all_amount<0) {
+                        } else if ($all_amount < 0) {
                           echo '<h1>Uważaj! Twój budżet jest na minusie! </h1>';
                         } else {
                           echo '<h1>Wydajesz tyle samo, co zarabiasz! </h1>';
@@ -211,10 +254,10 @@ $db->close();
           </footer>
 
         <!--JavaScript-->
-        <script src="jquery-3.2.1.min.js"></script>
+        <script src="js/jquery-3.2.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
-        <script src="script.js"></script>
+        <script src="js/script.js"></script>
 
     </body>
   </html>
